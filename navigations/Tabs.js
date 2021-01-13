@@ -12,7 +12,13 @@ const Tabs = () => {
     return (
         <Tab.Navigator
             tabBarOptions={{
-                showLabel:false
+                showLabel:false,
+                style: {
+                    borderTopWidth:0,
+                    backgroundColor:'transparent',
+                    elevation: 0
+
+                }
             }}
         >
             <Tab.Screen
