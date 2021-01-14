@@ -62,6 +62,26 @@ const TopBarCustomButton = ({accessibilityState, children, onPress}) => {
         )
     }
 }
+
+const CustomeTabBar = (props) => {
+    return (
+        <View>
+            <View
+                style={{
+                    position:'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: 30,
+                    backgroundColor: COLORS.white
+                }}
+            >
+
+            </View>
+            <BottomTabBar {...props.props} />
+        </View>
+    )
+}
 const Tabs = () => {
     return (
         <Tab.Navigator
@@ -74,6 +94,11 @@ const Tabs = () => {
 
                 }
             }}
+            tabBar={ (props) => (
+                <CustomeTabBar
+                    props={props}
+                />
+            )}
         >
             <Tab.Screen
                 name="Home"
